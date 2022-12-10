@@ -68,10 +68,15 @@ nav {
   left: 0;
   bottom: 0;
   translate: (-50%, -50%);
+  background-color: rgba(0, 72, 255, 0.704);
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: 1s ease-in;
 }
 
 .show {
   display: flex;
+  transition: 1s ease-in;
 }
 
 .book-items {

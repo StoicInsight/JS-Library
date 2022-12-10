@@ -37,10 +37,8 @@ class UI {
       list.appendChild(div)
   }
 
-  static checkValid(title, author, pages,) {
-    if (title === '' || author === '' || pages === '') {
-      alert('Must complete form')
-    }
+  static showAlert() {
+    
   }
 }
 
@@ -54,9 +52,12 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
 
   const book = new Book (title, author, pages, read);
   console.log(book)
-  UI.checkValid(title, author, pages)
-  UI.addBook(book)
-  showForm()
-  
+
+  if(title === '' || author === '' || pages === '') {
+    alert('Must complete form')
+  } else {
+      UI.addBook(book)
+      showForm()
+  }  
 })
 
