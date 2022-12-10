@@ -9,7 +9,7 @@ class Book {
 // window.addEventListener('onload', showForm())
 
 // Show form
-document.getElementById('show-form').addEventListener('click', showForm())
+document.getElementById('show-form').addEventListener('click', showForm)
 
 function showForm() {
   const form = document.getElementById('book-form');
@@ -25,6 +25,7 @@ class UI {
   static addBook(book) {
     const list = document.getElementById('book-list')
       const div = document.createElement('div');
+      div.classList.add('book-items');
       div.innerHTML = `
        <h3>Title: ${book.title}</h3> 
        <h3>Author: ${book.author}</h3> 

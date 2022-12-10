@@ -63,3 +63,7 @@ nav {
   display: flex;
 }
 
+.book-items {
+  background-color: aliceblue;
+  padding: 3rem;
+}
