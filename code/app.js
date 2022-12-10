@@ -3,6 +3,7 @@ class Book {
     this.title = title;
     this.author = author; 
     this.pages = pages; 
+    this.read = read; 
   }
 }
 
@@ -30,6 +31,8 @@ class UI {
        <h3>Title: ${book.title}</h3> 
        <h3>Author: ${book.author}</h3> 
        <h3>Pages: ${book.title}</h3> 
+       <h3>Read? ${book.read}</h3> 
+       <button class="cancel">X</button>
       `
       list.appendChild(div)
   }
@@ -41,8 +44,9 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
   const title = document.getElementById('title').value; 
   const author = document.getElementById('author').value; 
   const pages = document.getElementById('pages').value; 
+  const read = document.getElementById('read').value; 
 
-  const book = new Book (title, author, pages);
+  const book = new Book (title, author, pages, read);
   console.log(book)
   UI.addBook(book)
   showForm()
