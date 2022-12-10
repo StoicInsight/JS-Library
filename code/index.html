@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <script src="./app.js" defer></script>
+
+  <title>Library</title>
+</head>
+
+<body>
+  <nav class="nav">
+    <h1>Library</h1>
+    <button>Log In</button>
+  </nav>
+
+  <section class="book">
+    <button id="show-form" class="submit">+ Add Book</button>
+    <form action="submit" class="book-form" id="book-form">
+      <h1>Add a new book bro</h1>
+      <input type="text" class="input" id="title" placeholder="Whats the title?">
+      <input type="text" class="input" id="author" placeholder="Whats the author?">
+      <input type="text" class="input" id="pages" placeholder="How many pages?">
+      <div class="read">
+        <p>Have you read it?</p>
+        <input type="checkbox" id="checkbox">
+      </div>
+      <input type="submit" class='submit' id="submit" value="Submit">
+    </form>
+    <div class="book-list" id="book-list"></div>
+  </section>
+</body>
+
+</html>
