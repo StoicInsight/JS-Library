@@ -40,6 +40,12 @@ class UI {
   static showAlert() {
     
   }
+
+  static removeBook() {
+    document.querySelector('book-items').addEventListener('click', (e) => {
+      console.log("III", e)
+    })
+  }
 }
 
 
@@ -48,7 +54,7 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
   const title = document.getElementById('title').value; 
   const author = document.getElementById('author').value; 
   const pages = document.getElementById('pages').value; 
-  const read = document.getElementById('read').value; 
+  const read = document.getElementById('read').checked; 
 
   const book = new Book (title, author, pages, read);
   console.log(book)
@@ -58,6 +64,5 @@ document.getElementById('book-form').addEventListener('submit', (e) => {
   } else {
       UI.addBook(book)
       showForm()
-  }  
+  } 
 })
-
